@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+	{% if message %} 
+		{{ message }}
+	{% endif %}
+	{% include 'components/form.html'%}
+
+	<div id="coordinate-container">
+	{% if coordinate %}
+		{% for key, value in coordinate.items() %}
+			<p> {{key}} : {{value}} </p>
+		{% endfor %}
+	{% endif %}
+	</div>
+
+{% endblock%}

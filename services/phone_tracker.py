@@ -4,10 +4,13 @@ from opencage.geocoder import OpenCageGeocode
 from logging import Logger
 from constants.colors import GREEN, RED
 
+from config import Config
+from __logging.logger import setup_logger
+
 class PhoneTracker:
-    def __init__(self, api_key: str, logger: Optional[Logger] = None):
-        self.api_key = api_key
-        self.logger = logger
+    def __init__(self, api_key: str = None):
+        self.api_key = api_key if api_key is not None else Config.OPENCAGE_API_KEY
+        self.logger = setup_logger(name='Phone-Tracker', filename='Phone-Tracker.log')
 
     def track(self, phone_number: str) -> Optional[Dict]:
         try:
