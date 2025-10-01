@@ -1,6 +1,32 @@
-<div id="form-container">
-	<form action="{{ url_for('tracker.get_coordinate') }}" method="POST">
-		<input type="tel" name="phone" id="tel-input" required>
-		<input type="submit" id="submit-input">
+<div class="bg-card-light dark:bg-card-dark p-8 rounded-xl shadow-subtle dark:shadow-none">
+	<h1 class="text-2xl font-bold text-text-light dark:text-text-dark text-center mb-2">Phone Number Lookup</h1>
+	<p class="text-center text-subtext-light dark:text-subtext-dark mb-6">Enter a phone number to get its details.</p>
+	<form class="space-y-6" id="phone-form">
+	    <div>
+	        <label class="sr-only" for="phone_number">Phone Number</label>
+	        <div class="relative">
+	            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+	                <span class="material-icons text-subtext-light dark:text-subtext-dark">phone</span>
+	            </div>
+	            <input class="w-full pl-10 pr-4 py-3 bg-background-light dark:bg-background-dark border border-gray-300 dark:border-gray-600 rounded-md text-text-light dark:text-text-dark focus:ring-primary focus:border-primary" id="phone_number" name="phone_number" placeholder="e.g., +12025550104" required="" type="tel"/>
+	        </div>
+	        <p class="mt-2 text-sm text-red-600 dark:text-red-500 hidden" id="phone-error-message"><span class="font-medium">Oops!</span> Invalid phone number format.</p>
+	    </div>
+	    <div class="flex flex-col sm:flex-row gap-4">
+	        <button class="w-full flex justify-center items-center bg-primary text-white font-semibold py-3 px-4 rounded-md hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-background-dark transition-colors duration-300" type="submit">
+	        <span class="material-icons mr-2">search</span>
+	                        Get Information
+	        </button>
+	        <button class="w-full sm:w-auto flex justify-center items-center bg-gray-200 dark:bg-gray-700 text-text-light dark:text-text-dark font-semibold py-3 px-4 rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 dark:focus:ring-offset-background-dark transition-colors duration-300" id="clear-button" type="button">
+	        <span class="material-icons mr-2">clear</span>
+	                        Clear
+	        </button>
+	    </div>
 	</form>
+	</div>
+	<div class="bg-card-light dark:bg-card-dark p-8 rounded-xl shadow-subtle dark:shadow-none hidden" id="loading-spinner">
+	<div class="flex justify-center items-center">
+	    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+	    <p class="ml-4 text-text-light dark:text-text-dark">Fetching information...</p>
+	</div>
 </div>

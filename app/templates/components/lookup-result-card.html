@@ -1,0 +1,80 @@
+<div class="bg-card-light dark:bg-card-dark p-8 rounded-xl shadow-subtle dark:shadow-none hidden" id="results-card">
+	<h2 class="text-xl font-bold text-text-light dark:text-text-dark mb-6 text-center">Lookup Results</h2>
+	<div class="space-y-4">
+	    <div class="flex items-start justify-between">
+	        <div class="flex items-start">
+	            <span class="material-icons text-primary mr-4">phone</span>
+	            <div>
+	                <p class="text-sm font-medium text-subtext-light dark:text-subtext-dark">Phone</p>
+	                <p class="text-lg font-semibold text-text-light dark:text-text-dark" id="result-phone">+1 202-555-0104</p>
+	            </div>
+	        </div>
+	        <button class="text-subtext-light dark:text-subtext-dark hover:text-primary dark:hover:text-primary transition-colors" title="Copy phone number"><span class="material-icons">content_copy</span></button>
+	    </div>
+	    <div class="border-t border-gray-200 dark:border-gray-700"></div>
+	    <div class="flex items-start justify-between">
+	        <div class="flex items-start">
+	            <span class="material-icons text-primary mr-4">flag</span>
+	            <div>
+	                <p class="text-sm font-medium text-subtext-light dark:text-subtext-dark">Country</p>
+	                <p class="text-lg font-semibold text-text-light dark:text-text-dark" id="result-country">United States</p>
+	            </div>
+	        </div>
+	        <button class="text-subtext-light dark:text-subtext-dark hover:text-primary dark:hover:text-primary transition-colors" title="Copy country"><span class="material-icons">content_copy</span></button>
+	    </div>
+	    <div class="border-t border-gray-200 dark:border-gray-700"></div>
+	    <div class="flex items-start justify-between">
+	        <div class="flex items-start">
+	            <span class="material-icons text-primary mr-4">rss_feed</span>
+	            <div>
+	                <p class="text-sm font-medium text-subtext-light dark:text-subtext-dark">Service Provider</p>
+	                <p class="text-lg font-semibold text-text-light dark:text-text-dark" id="result-provider">AT&amp;T</p>
+	            </div>
+	        </div>
+	        <button class="text-subtext-light dark:text-subtext-dark hover:text-primary dark:hover:text-primary transition-colors" title="Copy service provider"><span class="material-icons">content_copy</span></button>
+	    </div>
+	    <div class="border-t border-gray-200 dark:border-gray-700"></div>
+	    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+	        <div class="flex items-start justify-between">
+	            <div class="flex items-start">
+	                <span class="material-icons text-primary mr-4">pin_drop</span>
+	                <div>
+	                    <p class="text-sm font-medium text-subtext-light dark:text-subtext-dark">Latitude</p>
+	                    <p class="text-lg font-semibold text-text-light dark:text-text-dark" id="result-latitude">38.8951</p>
+	                </div>
+	            </div>
+	            <button class="text-subtext-light dark:text-subtext-dark hover:text-primary dark:hover:text-primary transition-colors" title="Copy latitude"><span class="material-icons">content_copy</span></button>
+	        </div>
+	        <div class="flex items-start justify-between">
+	            <div class="flex items-start">
+	                <span class="material-icons text-primary mr-4">explore</span>
+	                <div>
+	                    <p class="text-sm font-medium text-subtext-light dark:text-subtext-dark">Longitude</p>
+	                    <p class="text-lg font-semibold text-text-light dark:text-text-dark" id="result-longitude">-77.0364</p>
+	                 </div>
+	            </div>
+	            <button class="text-subtext-light dark:text-subtext-dark hover:text-primary dark:hover:text-primary transition-colors" title="Copy longitude"><span class="material-icons">content_copy</span></button>
+	        </div>
+	    </div>
+	    <div class="border-t border-gray-200 dark:border-gray-700"></div>
+	    <div class="flex items-start justify-between">
+	        <div class="flex items-start">
+	            <span class="material-icons text-primary mr-4">location_city</span>
+	            <div>
+	                <p class="text-sm font-medium text-subtext-light dark:text-subtext-dark">Address</p>
+	                <p class="text-lg font-semibold text-text-light dark:text-text-dark" id="result-address">1600 Pennsylvania Avenue NW, Washington, D.C. 20500, USA</p>
+	            </div>
+	        </div>
+	        <button class="text-subtext-light dark:text-subtext-dark hover:text-primary dark:hover:text-primary transition-colors" title="Copy address"><span class="material-icons">content_copy</span></button>
+	    </div>
+	</div>
+</div>
+<div class="bg-red-100 dark:bg-red-900 border-l-4 border-red-500 text-red-700 dark:text-red-200 p-4 rounded-md shadow-lg hidden" id="error-card" role="alert">
+    <div class="flex">
+        <div class="py-1"><span class="material-icons text-red-500 mr-3">error_outline</span></div>
+        <div>
+            <p class="font-bold">Error</p>
+            <p id="error-message">Something went wrong. Please try again.</p>
+        </div>
+    </div>
+</div>

@@ -1,16 +1,28 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>{% block title %}Phone-Tracker{% endblock %}</title>
-		{% block style %}
-		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-		{% endblock%}
-	</head>
-	<body>
-		{% include 'components/header.html' %}
-		{% block content %}{% endblock %}
-		{% include 'components/footer.html' %}
-		{% block script %}{% endblock %}
-	</body>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <title>Phone Lookup</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+        <script src="{{ url_for('static', filename='js/tailwind-config.js') }}"></script>
+        {% block style %}
+        {% endblock %}
+    </head>
+    <body style="font-family: 'Poppins, sans-serif';" class="bg-background-light dark:bg-background-dark font-display">
+        <div class="min-h-screen flex flex-col items-center justify-center p-4">
+            <!-- Main -->
+            {% block main %}
+            {% endblock %}
+            <!-- End Main -->
+        </div>
+
+        <!-- Scripts -->
+        {% block script %}
+        {% endblock %}
+        <!-- End Script -->
+        
+    </body>
 </html>

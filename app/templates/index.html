@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block main %}
+	<main class="w-full max-w-2xl mx-auto space-y-8">
+		{% include 'components/form.html' %}
+		{% include 'components/lookup-result-card.html' %}
+	 </main>
+{% endblock %}
+
+{% block script %}
+	<script src="{{ url_for('static', filename='js/script.js')}}"></script>
+{% endblock %}

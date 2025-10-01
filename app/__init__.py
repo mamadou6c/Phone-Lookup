@@ -3,7 +3,7 @@ from flask import Flask
 def create_app():
 	app = Flask(__name__)
 
-	from .route import home_bp
-	app.register_blueprint(home_bp)
+	from .lookup import lookup_bp
+	app.register_blueprint(lookup_bp)
 
 	return app

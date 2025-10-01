@@ -7,12 +7,12 @@ from constants.colors import GREEN, RED
 from config import Config
 from __logging.logger import setup_logger
 
-class PhoneTracker:
+class PhoneLookup:
     def __init__(self, api_key: str = None):
         self.api_key = api_key if api_key is not None else Config.OPENCAGE_API_KEY
-        self.logger = setup_logger(name='Phone-Tracker', filename='Phone-Tracker.log')
+        self.logger = setup_logger(name='Phone-Lookup', filename='Phone-Lookup.log')
 
-    def track(self, phone_number: str) -> Optional[Dict]:
+    def lookup(self, phone_number: str) -> Optional[Dict]:
         try:
             self.logger.info(GREEN + "Parsing phone number...")
             parsed_number = parse(phone_number, None)
@@ -35,7 +35,7 @@ class PhoneTracker:
                 lat, lng, formatted_address = None, None, "Not found"
 
             result = {
-                "number": phone_number,
+                "phone": phone_number,
                 "country": location,
                 "service_provider": service_provider,
                 "latitude": lat,
@@ -43,9 +43,9 @@ class PhoneTracker:
                 "address": formatted_address
             }
 
-            self.logger.info(GREEN + "Tracking completed successfully.")
+            self.logger.info(GREEN + "Lookup completed successfully.")
             return result
 
         except Exception as e:
-            self.logger.error(RED + f"Error tracking number {phone_number}: {e}")
+            self.logger.error(RED + f"Error looking up number {phone_number}: {e}")
             return None
