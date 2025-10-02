@@ -96,7 +96,7 @@ Follow these steps to get the project up and running:
 4.  **View the results:**
     *   The results will be displayed in a card below the input form, including the country, service provider, latitude, longitude, and formatted address.
     ![Output](screenshot/screenshot_02.jpg)
-    ![Map](screenshot/screenshot_O3.jpg).
+    ![Map](screenshot/screenshot_O3.jpg)
     
 
 ## API Documentation
