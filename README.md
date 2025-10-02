@@ -88,7 +88,7 @@ Follow these steps to get the project up and running:
     *   Navigate to `http://127.0.0.1:5000/` in your web browser.
 
 3.  **Enter a phone number:**
-
+    *    Enter phone number in the input field.
     ![Input](screenshot/screenshot_01.jpg)
     *   Click the "Get Information" button.
 
