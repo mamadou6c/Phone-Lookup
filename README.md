@@ -1,6 +1,6 @@
-# Phone-Tracker 📱🔍
+# Phone-Lookup
 
-Track phone number information with ease! This project provides a simple interface to look up details about a phone number, including its country, service provider, and geographical location.
+Lookup phone number information with ease! This project provides a simple interface to look up details about a phone number, including its country, service provider, and geographical location.
 
 ## Table of Contents
 - [Features](#features)
@@ -9,7 +9,6 @@ Track phone number information with ease! This project provides a simple interfa
 - [Configuration](#configuration)
 - [Usage](#usage)
 - [API Documentation](#api-documentation)
-- [Deployment](#deployment)
 - [Contributing](#contributing)
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
@@ -28,7 +27,6 @@ Track phone number information with ease! This project provides a simple interfa
 *   **Flask:**  Web framework.
 *   **OpenCage Geocoder:**  For geocoding (latitude and longitude).
 *   **phonenumbers:**  For parsing and validating phone numbers.
-*   **colorama:**  For colorful terminal output.
 *   **python-dotenv:**  For managing environment variables.
 *   **HTML/CSS:**  Structure and styles for the web interface.
 *   **JavaScript:**  Frontend logic and API interaction.
@@ -46,8 +44,8 @@ Follow these steps to get the project up and running:
 1.  **Clone the repository:**
 
     ```bash
-    git clone <repository_url>
-    cd Phone-Tracker
+    git clone github.com/mamadou6C/Phone-Lookup.git
+    cd Phone-Lookup
     ```
 
 2.  **Create a virtual environment (recommended):**
@@ -91,7 +89,7 @@ Follow these steps to get the project up and running:
 
 3.  **Enter a phone number:**
 
-    *   Type the phone number you want to look up in the input field (e.g., +12025550104).
+    *   Type the phone number you want to look up in the input field (e.g., +224620462846).
     *   Click the "Get Information" button.
 
 4.  **View the results:**
@@ -111,7 +109,7 @@ The application provides a simple API endpoint for looking up phone number infor
 
 ```json
 {
-  "phone": "+12025550104"
+  "phone": "+224620462846"
 }
 ```
 
@@ -119,12 +117,12 @@ The application provides a simple API endpoint for looking up phone number infor
 
 ```json
 {
-  "phone": "+12025550104",
-  "country": "United States",
-  "service_provider": "AT&T",
-  "latitude": 38.8951,
-  "longitude": -77.0364,
-  "address": "1600 Pennsylvania Avenue NW, Washington, D.C. 20500, USA"
+  "phone": "+224620462846",
+  "country": "guinea",
+  "service_provider": "Orange",
+  "latitude": 10.7226226,
+  "longitude": -10.7083587,
+  "address": "Guinea"
 }
 ```
 
@@ -146,19 +144,9 @@ ERROR : Unable to lookup phone number
 curl -X POST -H "Content-Type: application/json" -d '{"phone": "+12025550104"}' http://127.0.0.1:5000/lookup
 ```
 
-## Deployment 📦
-
-To deploy this application to a production environment, consider the following:
-
-1.  **Web Server:** Use a production-ready web server like Gunicorn or uWSGI to serve the Flask application.
-2.  **Reverse Proxy:**  Set up a reverse proxy server like Nginx or Apache to handle incoming requests and route them to the Flask application.
-3.  **Environment Variables:**  Ensure all necessary environment variables (especially `OPENCAGE_API_KEY`) are properly configured in the production environment.
-4.  **HTTPS:**  Enable HTTPS to secure the communication between the client and the server.
-5.  **Logging:** Implement robust logging to monitor the application's performance and troubleshoot issues.
-
 ## Contributing 🤝
 
-We welcome contributions to this project! Here's how you can contribute:
+ I welcome contributions to this project! Here's how you can contribute:
 
 1.  **Fork the repository.**
 2.  **Create a new branch** for your feature or bug fix.
@@ -173,6 +161,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 *   Thanks to [OpenCage Geocoder](https://opencagedata.com/) for providing the geocoding API.
 *   Thanks to the [phonenumbers](https://github.com/daviddrysdale/python-phonenumbers) library for phone number parsing and formatting.
-*   Special thanks to [Colorama](https://github.com/pallets/flask) for terminal styling.
-
-[![Built with DocMint](https://img.shields.io/badge/Generated%20by-DocMint-red)](https://github.com/kingsleyesisi/DocMint)
