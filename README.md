@@ -164,4 +164,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 *   Thanks to [OpenCage Geocoder](https://opencagedata.com/) for providing the geocoding API.
 *   Thanks to the [phonenumbers](https://github.com/daviddrysdale/python-phonenumbers) library for phone number parsing and formatting.
-*   Thanks to [Openstreetmap](https://openstreetmap.or/) for the map.
+*   Thanks to [Openstreetmap](https://openstreetmap.org/) for the map.
