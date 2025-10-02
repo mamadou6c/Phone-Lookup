@@ -20,6 +20,7 @@ Lookup phone number information with ease! This project provides a simple interf
 *   **Service Provider:**  Identify the carrier associated with the phone number.
 *   **User-Friendly Interface:**  A clean and intuitive web interface built with Tailwind CSS.
 *   **Copy to Clipboard:** Easily copy the lookup results with a click.
+*   **View on Map:** View the latutude and longitude associated with number on a map.
 
 ## Technologies Used
 
