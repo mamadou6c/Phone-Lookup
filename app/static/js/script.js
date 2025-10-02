@@ -5,6 +5,10 @@ const phoneErrorMessage = document.getElementById('phone-error-message');
 const resultsCard = document.getElementById('results-card');
 const errorCard = document.getElementById('error-card');
 const loadingSpinner = document.getElementById('loading-spinner');
+const mapContainer = document.getElementById('map-container');
+const viewMapBtn = document.getElementById('view-map-btn');
+const closeMapBtn = document.getElementById('close-map-btn');
+const mapDiv = document.getElementById('map');
 
 
 
@@ -53,6 +57,7 @@ const lookupPhone = async (phoneNumber) => {
 phoneNumberInput.addEventListener('input', validatePhoneNumber);
 phoneForm.addEventListener('submit', async function(event) {
     event.preventDefault();
+    mapContainer.classList.add('hidden');
     if (!validatePhoneNumber()) {
         resultsCard.classList.add('hidden');
         errorCard.classList.add('hidden');
@@ -104,6 +109,7 @@ clearButton.addEventListener('click', function() {
     resultsCard.classList.add('hidden');
     errorCard.classList.add('hidden');
     loadingSpinner.classList.add('hidden');
+    mapContainer.classList.add('hidden');
 });
 
 
@@ -127,3 +133,20 @@ resultsCard.addEventListener('click', function(event) {
         }
     }
 });
+
+const viewMap = () => {
+     const lat = document.getElementById('result-latitude').textContent;
+    const lon = document.getElementById('result-longitude').textContent;
+    mapContainer.classList.remove('hidden');
+    // Simple map embed using an iframe (e.g., OpenStreetMap)
+    mapDiv.innerHTML = `<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=${parseFloat(lon)-0.01}%2C${parseFloat(lat)-0.01}%2C${parseFloat(lon)+0.01}%2C${parseFloat(lat)+0.01}&amp;layer=mapnik&amp;marker=${lat}%2C${lon}" style="border: 1px solid black; border-radius: 0.5rem;"></iframe>`;
+    mapContainer.scrollIntoView({ behavior: 'smooth' });
+};
+
+const closeMap = () => {
+    mapContainer.classList.add('hidden');
+    mapDiv.innerHTML = '<p class="text-subtext-light dark:text-subtext-dark">Map will be displayed here.</p>'; // Reset map content
+};
+
+viewMapBtn.addEventListener('click', viewMap);
+closeMapBtn.addEventListener('click', closeMap);

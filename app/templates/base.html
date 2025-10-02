@@ -4,12 +4,14 @@
         <meta charset="utf-8"/>
         <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
         <title>Phone Lookup</title>
-        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
         <script src="{{ url_for('static', filename='js/tailwind-config.js') }}"></script>
+        <!-- Style -->
         {% block style %}
         {% endblock %}
+        <!-- End Style -->
     </head>
     <body style="font-family: 'Poppins, sans-serif';" class="bg-background-light dark:bg-background-dark font-display">
         <div class="min-h-screen flex flex-col items-center justify-center p-4">
