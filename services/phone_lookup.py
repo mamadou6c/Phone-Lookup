@@ -5,25 +5,19 @@ from logging import Logger
 from constants.colors import GREEN, RED
 
 from config import Config
-from __logging.logger import setup_logger
 
 class PhoneLookup:
     def __init__(self, api_key: str = None):
         self.api_key = api_key if api_key is not None else Config.OPENCAGE_API_KEY
-        self.logger = setup_logger(name='Phone-Lookup', filename='Phone-Lookup.log')
 
     def lookup(self, phone_number: str) -> Optional[Dict]:
         try:
-            self.logger.info(GREEN + "Parsing phone number...")
             parsed_number = parse(phone_number, None)
 
-            self.logger.info(GREEN + "Getting location...")
             location = phone_geocoder.description_for_number(parsed_number, "en")
 
-            self.logger.info(GREEN + "Getting service provider...")
             service_provider = carrier.name_for_number(parsed_number, "en")
 
-            self.logger.info(GREEN + "Fetching detailed location...")
             opencage_geocoder = OpenCageGeocode(self.api_key)
             results = opencage_geocoder.geocode(str(location))
 
@@ -43,9 +37,7 @@ class PhoneLookup:
                 "address": formatted_address
             }
 
-            self.logger.info(GREEN + "Lookup completed successfully.")
             return result
 
         except Exception as e:
-            self.logger.error(RED + f"Error looking up number {phone_number}: {e}")
             return None
