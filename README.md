@@ -88,13 +88,14 @@ Follow these steps to get the project up and running:
     *   Navigate to `http://127.0.0.1:5000/` in your web browser.
 
 3.  **Enter a phone number:**
-
-    *   Type the phone number you want to look up in the input field (e.g., +224620462846).
+    *    Enter phone number in the input field.
+    ![Input](screenshot/screenshot_01.jpg)
     *   Click the "Get Information" button.
 
 4.  **View the results:**
-
     *   The results will be displayed in a card below the input form, including the country, service provider, latitude, longitude, and formatted address.
+    ![Output](screenshot/screenshot_02.jpg)
+    
 
 ## API Documentation
 
