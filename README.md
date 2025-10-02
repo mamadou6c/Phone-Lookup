@@ -13,7 +13,7 @@ Lookup phone number information with ease! This project provides a simple interf
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
 
-## Features ✨
+## Features
 
 *   **Phone Number Lookup:** Get detailed information about a phone number.
 *   **Geographical Location:**  Find the country, latitude, and longitude associated with the number.
@@ -21,7 +21,7 @@ Lookup phone number information with ease! This project provides a simple interf
 *   **User-Friendly Interface:**  A clean and intuitive web interface built with Tailwind CSS.
 *   **Copy to Clipboard:** Easily copy the lookup results with a click.
 
-## Technologies Used 🛠️
+## Technologies Used
 
 *   **Python:** Backend logic and API.
 *   **Flask:**  Web framework.
@@ -37,7 +37,7 @@ Lookup phone number information with ease! This project provides a simple interf
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.0+-blue.svg?style=flat-square&logo=tailwindcss)](https://tailwindcss.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Installation ⬇️
+## Installation
 
 Follow these steps to get the project up and running:
 
@@ -62,7 +62,7 @@ Follow these steps to get the project up and running:
     pip install -r requirements.txt
     ```
 
-## Configuration ⚙️
+## Configuration
 
 1.  **Set up environment variables:**
 
@@ -75,7 +75,7 @@ Follow these steps to get the project up and running:
 
     *   You can obtain an API key from [OpenCage Geocoder](https://opencagedata.com/).
 
-## Usage 🚀
+## Usage
 
 1.  **Run the application:**
 
@@ -96,7 +96,7 @@ Follow these steps to get the project up and running:
 
     *   The results will be displayed in a card below the input form, including the country, service provider, latitude, longitude, and formatted address.
 
-## API Documentation 📖
+## API Documentation
 
 The application provides a simple API endpoint for looking up phone number information.
 
@@ -144,7 +144,7 @@ ERROR : Unable to lookup phone number
 curl -X POST -H "Content-Type: application/json" -d '{"phone": "+12025550104"}' http://127.0.0.1:5000/lookup
 ```
 
-## Contributing 🤝
+## Contributing
 
  I welcome contributions to this project! Here's how you can contribute:
 
@@ -153,11 +153,11 @@ curl -X POST -H "Content-Type: application/json" -d '{"phone": "+12025550104"}' 
 3.  **Make your changes** and commit them with descriptive messages.
 4.  **Submit a pull request** to the main branch.
 
-## License 📝
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Acknowledgments 🙏
+## Acknowledgments
 
 *   Thanks to [OpenCage Geocoder](https://opencagedata.com/) for providing the geocoding API.
 *   Thanks to the [phonenumbers](https://github.com/daviddrysdale/python-phonenumbers) library for phone number parsing and formatting.
